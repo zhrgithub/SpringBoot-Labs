@@ -48,7 +48,7 @@ public class MessageHandlerContainer implements InitializingBean {
     }
 
     /**
-     * 获得 MessageHandler 处理的消息类
+     * 获得 MessageHandler 处理的消息类，实际上是获取Message对应的实现类
      *
      * @param handler 处理器
      * @return 消息类
