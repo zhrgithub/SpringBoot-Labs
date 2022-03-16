@@ -14,7 +14,7 @@ public class ChatRedirectToUserRequestHandler implements MessageHandler<ChatRedi
 
     @Override
     public void execute(Channel channel, ChatRedirectToUserRequest message) {
-        logger.info("[execute][收到消息：{}]", message);
+        logger.info("[execute][发送消息：{}]", message);
     }
 
     @Override
