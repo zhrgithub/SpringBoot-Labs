@@ -4,6 +4,7 @@ import cn.iocoder.springboot.lab67.nettycommondemo.dispatcher.Message;
 
 /**
  * 发送给指定人的私聊消息 Request
+ * @author zhr
  */
 public class ChatSendToOneRequest implements Message {
 

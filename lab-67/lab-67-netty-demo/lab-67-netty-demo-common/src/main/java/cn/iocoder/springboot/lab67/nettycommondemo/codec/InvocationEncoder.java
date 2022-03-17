@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * {@link Invocation} 编码器
+ * @author zhr
  */
 public class InvocationEncoder extends MessageToByteEncoder<Invocation> {
 

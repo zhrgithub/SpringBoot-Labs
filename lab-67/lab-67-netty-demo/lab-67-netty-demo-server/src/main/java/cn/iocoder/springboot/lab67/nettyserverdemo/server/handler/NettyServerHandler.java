@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * 服务端 Channel 实现类，提供对客户端 Channel 建立连接、断开连接、异常时的处理
+ * @author zhr
  */
 @Component
 @ChannelHandler.Sharable

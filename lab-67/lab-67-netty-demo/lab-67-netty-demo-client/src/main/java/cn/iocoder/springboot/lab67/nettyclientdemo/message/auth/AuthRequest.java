@@ -4,6 +4,7 @@ import cn.iocoder.springboot.lab67.nettycommondemo.dispatcher.Message;
 
 /**
  * 用户认证请求
+ * @author zhr
  */
 public class AuthRequest implements Message {
 

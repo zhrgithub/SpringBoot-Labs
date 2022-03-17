@@ -5,6 +5,9 @@ import cn.iocoder.springboot.lab67.nettycommondemo.dispatcher.MessageHandlerCont
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * @author zhr
+ */
 @Configuration
 public class NettyClientConfig {
 

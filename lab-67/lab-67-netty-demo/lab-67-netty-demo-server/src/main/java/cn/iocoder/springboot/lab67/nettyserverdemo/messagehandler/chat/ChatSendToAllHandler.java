@@ -10,6 +10,9 @@ import io.netty.channel.Channel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author zhr
+ */
 @Component
 public class ChatSendToAllHandler implements MessageHandler<ChatSendToAllRequest> {
 

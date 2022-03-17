@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSON;
 
 /**
  * 通信协议的消息体
+ * @author zhr
  */
 public class Invocation {
 
@@ -17,7 +18,9 @@ public class Invocation {
      */
     private String message;
 
-    // 空构造方法
+    /**
+     * 空构造方法
+     */
     public Invocation() {
     }
 

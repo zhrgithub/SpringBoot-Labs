@@ -50,12 +50,18 @@ public class NettyServer {
         // 创建 ServerBootstrap 对象，用于 Netty Server 启动
         ServerBootstrap bootstrap = new ServerBootstrap();
         // 设置 ServerBootstrap 的各种属性
-        bootstrap.group(bossGroup, workerGroup) // 设置两个 EventLoopGroup 对象
-                .channel(NioServerSocketChannel.class)  // 指定 Channel 为服务端 NioServerSocketChannel
-                .localAddress(new InetSocketAddress(port)) // 设置 Netty Server 的端口
-                .option(ChannelOption.SO_BACKLOG, 1024) // 服务端 accept 队列的大小
-                .childOption(ChannelOption.SO_KEEPALIVE, true) // TCP Keepalive 机制，实现 TCP 层级的心跳保活功能
-                .childOption(ChannelOption.TCP_NODELAY, true) // 允许较小的数据包的发送，降低延迟
+        // 设置两个 EventLoopGroup 对象
+        bootstrap.group(bossGroup, workerGroup)
+                // 指定 Channel 为服务端 NioServerSocketChannel
+                .channel(NioServerSocketChannel.class)
+                // 设置 Netty Server 的端口
+                .localAddress(new InetSocketAddress(port))
+                // 服务端 accept 队列的大小
+                .option(ChannelOption.SO_BACKLOG, 1024)
+                // TCP Keepalive 机制，实现 TCP 层级的心跳保活功能
+                .childOption(ChannelOption.SO_KEEPALIVE, true)
+                // 允许较小的数据包的发送，降低延迟
+                .childOption(ChannelOption.TCP_NODELAY, true)
                 .childHandler(nettyServerHandlerInitializer);
         // 绑定端口，并同步等待成功，即启动服务端
         ChannelFuture future = bootstrap.bind().sync();

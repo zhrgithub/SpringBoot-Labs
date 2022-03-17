@@ -4,6 +4,7 @@ import cn.iocoder.springboot.lab67.nettycommondemo.dispatcher.Message;
 
 /**
  * 消息 - 心跳响应
+ * @author zhr
  */
 public class HeartbeatResponse implements Message {
 

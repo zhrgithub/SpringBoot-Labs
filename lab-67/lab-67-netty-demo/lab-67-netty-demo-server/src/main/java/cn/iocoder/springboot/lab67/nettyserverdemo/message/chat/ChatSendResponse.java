@@ -4,6 +4,7 @@ import cn.iocoder.springboot.lab67.nettycommondemo.dispatcher.Message;
 
 /**
  * 聊天发送消息结果的 Response
+ * @author zhr
  */
 public class ChatSendResponse implements Message {
 

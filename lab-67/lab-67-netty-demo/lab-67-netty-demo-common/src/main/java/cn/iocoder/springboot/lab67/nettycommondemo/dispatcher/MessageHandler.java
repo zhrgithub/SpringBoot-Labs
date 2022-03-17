@@ -2,6 +2,9 @@ package cn.iocoder.springboot.lab67.nettycommondemo.dispatcher;
 
 import io.netty.channel.Channel;
 
+/**
+ * @author zhr
+ */
 public interface MessageHandler<T extends Message> {
 
     /**

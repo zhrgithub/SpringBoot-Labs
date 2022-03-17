@@ -10,6 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
+/**
+ * @author zhr
+ */
 @Component
 public class AuthRequestHandler implements MessageHandler<AuthRequest> {
 

@@ -4,6 +4,7 @@ import cn.iocoder.springboot.lab67.nettycommondemo.dispatcher.Message;
 
 /**
  * 转发消息给一个用户的 Message
+ * @author zhr
  */
 public class ChatRedirectToUserRequest implements Message {
 

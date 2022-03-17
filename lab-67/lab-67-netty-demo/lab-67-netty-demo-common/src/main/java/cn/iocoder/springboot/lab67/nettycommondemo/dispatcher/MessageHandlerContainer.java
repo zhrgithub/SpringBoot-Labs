@@ -13,6 +13,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * @author zhr_java@163.com
+ */
 public class MessageHandlerContainer implements InitializingBean {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
@@ -28,8 +31,10 @@ public class MessageHandlerContainer implements InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         // 通过 ApplicationContext 获得所有 MessageHandler Bean
-        applicationContext.getBeansOfType(MessageHandler.class).values() // 获得所有 MessageHandler Bean
-                .forEach(messageHandler -> handlers.put(messageHandler.getType(), messageHandler)); // 添加到 handlers 中
+        // 获得所有 MessageHandler Bean
+        // 添加到 handlers 中
+        applicationContext.getBeansOfType(MessageHandler.class).values()
+                .forEach(messageHandler -> handlers.put(messageHandler.getType(), messageHandler));
         logger.info("[afterPropertiesSet][消息处理器数量：{}]", handlers.size());
     }
 
@@ -59,7 +64,8 @@ public class MessageHandlerContainer implements InitializingBean {
         // 获得接口的 Type 数组
         Type[] interfaces = targetClass.getGenericInterfaces();
         Class<?> superclass = targetClass.getSuperclass();
-        while ((Objects.isNull(interfaces) || 0 == interfaces.length) && Objects.nonNull(superclass)) { // 此处，是以父类的接口为准
+        // 此处，是以父类的接口为准
+        while ((Objects.isNull(interfaces) || 0 == interfaces.length) && Objects.nonNull(superclass)) {
             interfaces = superclass.getGenericInterfaces();
             superclass = targetClass.getSuperclass();
         }

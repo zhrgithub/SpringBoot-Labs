@@ -12,6 +12,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author zhr
+ */
 @Component
 public class NettyServerHandlerInitializer extends ChannelInitializer<Channel> {
 

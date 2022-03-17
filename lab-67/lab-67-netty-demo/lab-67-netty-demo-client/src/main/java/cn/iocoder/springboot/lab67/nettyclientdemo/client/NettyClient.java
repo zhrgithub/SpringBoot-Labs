@@ -16,6 +16,9 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author zhr
+ */
 @Component
 public class NettyClient {
 

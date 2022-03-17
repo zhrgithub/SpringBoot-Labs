@@ -15,6 +15,7 @@ import java.util.concurrent.ConcurrentMap;
  * 客户端 Channel 管理器。提供两种功能：
  * 1. 客户端 Channel 的管理
  * 2. 向客户端 Channel 发送消息
+ * @author zhr
  */
 @Component
 public class NettyChannelManager {

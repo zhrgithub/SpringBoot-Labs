@@ -4,6 +4,7 @@ import cn.iocoder.springboot.lab67.nettycommondemo.dispatcher.Message;
 
 /**
  * 发送给所有人的群聊消息的 Message
+ * @author zhr
  */
 public class ChatSendToAllRequest implements Message {
 
